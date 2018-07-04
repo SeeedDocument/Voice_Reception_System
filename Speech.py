@@ -7,7 +7,6 @@ File name: speech.py
 '''
 
 from evdev import InputDevice,categorize,ecodes
-from pypinyin import pinyin, lazy_pinyin
 from ctypes import *
 from pixel_ring import pixel_ring
 from respeaker.bing_speech_api import BingSpeechAPI,RequestError
@@ -24,7 +23,6 @@ from qcloudsms_py.httpclient import HTTPError
 
 from voice_engine.element import Element
 	
-import mraa
 import logging
 import ConfigParser
 import threading,signal
