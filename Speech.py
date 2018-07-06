@@ -72,10 +72,10 @@ appkey = "214b971761479e894e5fd27227d4e936"
 
 
 '''
-LANGUAGE == True (English)，Flase = Chinese
+LANGUAGE == True (English)，Flase = (Chinese, NOT enabled yet)
 '''
-ENPATH = "/home/respeaker/twilio/username_en.txt"
-ALLNAME = "/home/respeaker/twilio/allname.txt"
+ENPATH = "/home/respeaker/Voice_Reception_System/username_en.txt"
+ALLNAME = "/home/respeaker/Voice_Reception_System/allname.txt"
 
 LANGUAGE = True
 
@@ -91,7 +91,7 @@ ON			= 0
 TENCENT_TWILIO = True:  TWILIO 
 TENCENT_TWILIO = False: Tencent
 '''
-TENCENT_TWILIO = False
+TENCENT_TWILIO = True
 
 
 
@@ -156,12 +156,12 @@ class Bing(Element):
 				is_music = False
 					
 				time.sleep(1)
-				#play_music('mpg123 /home/respeaker/twilio/notfind.mp3')
-				play_music('mpg123 /home/respeaker/twilio/not_clear.mp3')
+				#play_music('mpg123 /home/respeaker/Voice_Reception_System/notfind.mp3')
+				play_music('mpg123 /home/respeaker/Voice_Reception_System/not_clear.mp3')
 			except RequestError as e:
 				print('Network error {}'.format(e))
 				time.sleep(1)
-				play_music('mpg123 /home/respeaker/twilio/net_error.mp3')
+				play_music('mpg123 /home/respeaker/Voice_Reception_System/net_error.mp3')
 
 			self.listening = False
 			self.event.clear()
@@ -210,11 +210,11 @@ class speech_server_scheduler(object):
 				print("---------------------------\n")
 				
 				convert_lis = textparse.convert_to_list(ALLNAME)
-				'''
+				
 				for strd in convert_lis:
 					print(strd)
 					print("\n")
-				'''
+				
 				# start parse voice 
 				for i in array:
 					for employee in convert_lis:
@@ -227,7 +227,7 @@ class speech_server_scheduler(object):
 							'''
 							Thank you. What is your name?
 							'''
-							play_music("mpg123 /home/respeaker/twilio/Thanks.mp3")
+							play_music("mpg123 /home/respeaker/Voice_Reception_System/Thanks.mp3")
 							count=2
 							
 							while(count):
@@ -263,7 +263,7 @@ class speech_server_scheduler(object):
 									'''
 									Thank you. I will send them a message
 									'''
-									play_music("mpg123 /home/respeaker/twilio/message.mp3")
+									play_music("mpg123 /home/respeaker/Voice_Reception_System/message.mp3")
 									time.sleep(0.1)
 									employeeNumber = search_user(''.join(employee).lower(),ENPATH,LANGUAGE)
 									print(employeeNumber)
@@ -295,7 +295,7 @@ class speech_server_scheduler(object):
 					
 					is_music = False
 				
-					play_music('mpg123 /home/respeaker/twilio/notfind.mp3')
+					play_music('mpg123 /home/respeaker/Voice_Reception_System/notfind.mp3')
 				
 
 				
@@ -494,13 +494,13 @@ def pre_play(v):
 			'''
 			Welcome to x.factory. Who are you here to see?
 			'''
-			os.system("mpg123 /home/respeaker/twilio/welcome.mp3") 
+			os.system("mpg123 /home/respeaker/Voice_Reception_System/welcome.mp3") 
 			is_pressed	= False
 						
 			try:
 				#global is_music				
 				is_music	= True
-				par = speech_server_scheduler('/home/respeaker/twilio/test.wav', 'wav')
+				par = speech_server_scheduler('/home/respeaker/Voice_Reception_System/test.wav', 'wav')
 				
 				'''
 				bing api call
