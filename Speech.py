@@ -56,19 +56,19 @@ stringcopy = ''
 '''
 Twilio key
 '''
-ACCOUNTSID = 'AC47ec158bb2ba8fc2eaac9201475c5cfe'
-AUTHTOKEN = '3e464ae04d4b1ac8e5f2e3322dde6ffd'
+ACCOUNTSID = ''
+AUTHTOKEN = ''
 
 '''
 Bing key
 '''
-BING_KEY = 'ccac906bc35345f0abd7b57db29d8123'
+BING_KEY = ''
 
 '''
 tencent key
 '''
-appid = 1400102718
-appkey = "214b971761479e894e5fd27227d4e936"
+appid = ''
+appkey = ''
 
 
 '''
