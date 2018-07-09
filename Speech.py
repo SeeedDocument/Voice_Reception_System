@@ -56,8 +56,8 @@ stringcopy = ''
 '''
 Twilio key
 '''
-ACCOUNTSID = 'AC126c5beb95795762e545c22121d61d24'
-AUTHTOKEN = '4d036c85d72c9de3005fd757d1d8663a'
+ACCOUNTSID = 'AC47ec158bb2ba8fc2eaac9201475c5cfe'
+AUTHTOKEN = '3e464ae04d4b1ac8e5f2e3322dde6ffd'
 
 '''
 Bing key
